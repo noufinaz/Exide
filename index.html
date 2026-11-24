@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Exide Battery Shoppe – Batteries, Inverters & Solar in Kerala</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#f5f7fa;--surface:#fff;--ink:#102a43;--muted:#52667a;--line:#d9e2ec;--red:#c8102e;--redink:#fff;--sun:#f0a81c;--ok:#1b7f4b;--warn:#b45309;--bad:#b42318;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1b2a;--surface:#14283c;--ink:#eaf0f6;--muted:#9fb3c8;--line:#274159;--red:#ef4b63;--redink:#14080b;--sun:#f5b93f;--ok:#4ac08a;--warn:#f0a44a;--bad:#ff8a7a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1b2a;--surface:#14283c;--ink:#eaf0f6;--muted:#9fb3c8;--line:#274159;--red:#ef4b63;--redink:#14080b;--sun:#f5b93f;--ok:#4ac08a;--warn:#f0a44a;--bad:#ff8a7a;color-scheme:dark}
+html{scroll-padding-top:calc(60px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Barlow,system-ui,sans-serif}
+h1,h2,h3{font-family:"Barlow Condensed",Impact,sans-serif;line-height:1.05;margin:0}
+h1{font-size:clamp(2.4rem,8vw,4.4rem);font-weight:700}
+h2{font-size:clamp(1.8rem,5vw,2.6rem);font-weight:700;margin-bottom:.4rem}
+h3{font-size:1.25rem;font-weight:600}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+section{padding:48px 0}
+.lead{color:var(--muted);max-width:60ch;margin:0 0 22px}
+header{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;gap:16px;min-height:56px}
+.logo{font:700 1.3rem "Barlow Condensed",sans-serif;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{width:22px;height:14px;background:var(--red);border-radius:2px;position:relative;display:inline-block}
+.logo i:after{content:"";position:absolute;right:-4px;top:4px;width:3px;height:6px;background:var(--red);border-radius:0 2px 2px 0}
+nav{margin-left:auto;display:flex;gap:14px;overflow-x:auto;font-weight:500;font-size:.95rem}
+nav a{text-decoration:none;white-space:nowrap;color:var(--muted)}
+nav a:hover{color:var(--red)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.hero{padding:56px 0 40px;background:linear-gradient(180deg,var(--surface),var(--bg))}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:52ch;margin:14px 0 22px}
+.btn{display:inline-block;border:0;border-radius:8px;padding:12px 20px;font:600 1rem Barlow,sans-serif;cursor:pointer;text-decoration:none;background:var(--red);color:var(--redink)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.btn.sm{padding:7px 12px;font-size:.9rem}
+.hero .btns{display:flex;gap:10px;flex-wrap:wrap}
+.meter{margin-top:30px;display:flex;gap:6px;max-width:420px}
+.meter b{flex:1;height:12px;border-radius:2px;background:var(--red)}
+.meter b:nth-child(n+7){background:var(--line)}
+.meter b:nth-child(n+5):nth-child(-n+6){background:var(--sun)}
+.meter+small{color:var(--muted);display:block;margin-top:6px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;font:500 .92rem Barlow,sans-serif;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.card .brand{color:var(--red);font-weight:600;font-size:.9rem}
+.card .spec{color:var(--muted);font-size:.92rem}
+.card .price{font:700 1.4rem "Barlow Condensed",sans-serif;margin-top:auto;padding-top:6px}
+.card .row{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.card.on{border-color:var(--red);box-shadow:0 0 0 2px var(--red)}
+.note{font-size:.88rem;color:var(--muted)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.form{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+label{display:flex;flex-direction:column;gap:4px;font-weight:500;font-size:.95rem}
+input,select{font:inherit;padding:10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+#fres{margin-top:18px}
+.verdict{border-left:6px solid var(--ok);padding:10px 14px;background:var(--bg);border-radius:0 8px 8px 0;margin-bottom:14px}
+.verdict.warn{border-color:var(--warn)}.verdict.bad{border-color:var(--bad)}
+.stats{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.stats div{background:var(--bg);border-radius:8px;padding:10px 12px}
+.stats b{display:block;font:700 1.5rem "Barlow Condensed",sans-serif}
+.stats span{font-size:.85rem;color:var(--muted)}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:.95rem}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+th:first-child{color:var(--muted);font-weight:500;width:26%}
+td.best{color:var(--ok);font-weight:600}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.9rem}
+.contact{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a class="logo" href="#top"><i></i>Exide Battery Shoppe</a>
+<nav aria-label="Main"><a href="#products">Products</a><a href="#compare">Compare</a><a href="#kseb">KSEB check</a><a href="#solar">Solar</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<h1>Batteries, inverters and solar for Kerala homes</h1>
+<p>Everything for backup power under one roof: car and bike batteries, inverter batteries, inverters and rooftop solar with KSEB net metering support.</p>
+<div class="btns"><a class="btn" href="#kseb">Check solar feasibility</a><a class="btn alt" href="#compare">Compare products</a></div>
+<div class="meter" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b></div>
+<small>Kerala sun: about 4 kWh per kW of panels on a clear day</small>
+</div></div>
+
+<section id="products"><div class="wrap">
+<h2>Products available in Kerala</h2>
+<p class="lead">Main brands and ranges sold across Kerala. Prices are approximate market ranges; call us for today’s rate and stock.</p>
+<div class="chips" id="tabs" role="group" aria-label="Product type">
+<button class="chip" data-t="bat" aria-pressed="true">Batteries</button>
+<button class="chip" data-t="inv" aria-pressed="false">Inverters & solar inverters</button>
+<button class="chip" data-t="pan" aria-pressed="false">Solar panels</button>
+</div>
+<div class="chips" id="filters" role="group" aria-label="Filter"></div>
+<div class="grid" id="cat"></div>
+<p class="note" id="catnote"></p>
+</div></section>
+
+<section id="compare"><div class="wrap">
+<h2>Compare side by side</h2>
+<p class="lead">Press “Compare” on up to three batteries or three inverters above. The best value in each row is marked in green.</p>
+<div class="panel"><div class="tw" id="cmp"><p class="note">Nothing selected yet. Choose products from the list above.</p></div></div>
+</div></section>
+
+<section id="kseb"><div class="wrap">
+<h2>KSEB solar feasibility check</h2>
+<p class="lead">For homes with a KSEB connection. Enter your details to get an estimate of system size, subsidy and payback.</p>
+<div class="panel">
+<div class="form">
+<label>Monthly units used (kWh)<input id="f_u" type="number" min="30" value="300" inputmode="numeric"></label>
+<label>Usable shadow-free roof (sq ft)<input id="f_a" type="number" min="0" value="400" inputmode="numeric"></label>
+<label>Shade on roof<select id="f_s"><option value="1">None</option><option value="0.85">Some, mornings or evenings</option><option value="0.6">Heavy, most of the day</option></select></label>
+<label>KSEB connection<select id="f_p"><option value="1">Single phase</option><option value="3">Three phase</option></select></label>
+<label>Property<select id="f_t"><option value="r">Home (residential)</option><option value="c">Shop or office</option></select></label>
+</div>
+<p><button class="btn" id="fgo">Check feasibility</button></p>
+<div id="fres" aria-live="polite"></div>
+<p class="note">Estimate only. Subsidy follows the central PM Surya Ghar scheme for homes and can change. KSEB net-metering approval, a site visit and your latest tariff decide the final figures.</p>
+</div>
+</div></section>
+
+<section id="solar"><div class="wrap">
+<h2>Solar plant packages</h2>
+<p class="lead">Rooftop systems designed, supplied, installed and connected to KSEB.</p>
+<div class="grid" id="pk"></div>
+<p class="note">Approximate prices before subsidy, with standard mounting and wiring. Final quote after a site visit.</p>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<h2>Visit or call us</h2>
+<div class="contact panel">
+<div><h3>Shop</h3><p>Exide Battery Shoppe<br>Add street, town and district, Kerala</p></div>
+<div><h3>Phone and WhatsApp</h3><p><a href="tel:+910000000000">+91 00000 00000</a></p></div>
+<div><h3>Hours</h3><p>Mon–Sat 9:30 am – 7:30 pm<br>Sunday by appointment</p></div>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">© Exide Battery Shoppe. Brand and product names belong to their respective owners. Prices and specifications are indicative and may change.</div></footer>
+
+<script>
+var B=[
+["Exide","Inva Master IMTT1500","Tall tubular",150,60,15500],
+["Exide","Inva Master IMTT2000","Tall tubular",200,60,20500],
+["Exide","InvaTubular IT500","Tubular",150,60,14500],
+["Exide","Powersafe+ SMF 12V","SMF / VRLA",100,36,10500],
+["Amaron","Quanta Tall Tubular","Tall tubular",150,60,15500],
+["Amaron","Current Tall Tubular","Tall tubular",200,60,20000],
+["Luminous","Red Charge RC 18000","Tall tubular",150,60,15500],
+["Luminous","Red Charge RC 25000","Tall tubular",200,60,20500],
+["Microtek","Jumbo Tubular","Tall tubular",150,48,14000],
+["Livguard","IT 1560TT","Tall tubular",150,60,15500],
+["Livguard","IT 2060TT","Tall tubular",200,60,20500],
+["V-Guard","Tall Tubular","Tall tubular",150,48,14500],
+["Su-Kam","Tall Tubular","Tall tubular",150,48,14000],
+["Okaya","Tall Tubular","Tall tubular",150,48,14000],
+["Generic","Flat plate 12V","Flat plate",120,24,9500],
+["Various","LiFePO4 12.8V","Lithium (LiFePO4)",100,60,32000],
+["Exide","Mileage (car)","Automotive",45,48,5800],
+["Exide","Matrix (car)","Automotive",65,48,7500],
+["Amaron","Pro / Black (car)","Automotive",45,48,5500],
+["Exide","Xpress 12V","Two-wheeler",9,24,1300],
+["Amaron","Pro Bike 12V","Two-wheeler",9,24,1250],
+["Exide","E-rickshaw 12V","E-rickshaw",100,12,9500]];
+var I=[
+["Exide","Home UPS 850","Square / sine",850,12,"No",24,4500],
+["Exide","Pure Sine 1100","Pure sine",1100,12,"No",24,6500],
+["Luminous","Eco Watt Neo 1050","Pure sine",1050,12,"No",24,5800],
+["Luminous","Zelio+ 1100","Pure sine",1100,12,"No",24,6800],
+["Luminous","Cruze 2KVA","Pure sine",2000,24,"No",24,14500],
+["Luminous","NXT+ Solar PCU 1700","Pure sine",1700,24,"Yes",24,17500],
+["Microtek","Super Power 1100","Pure sine",1100,12,"No",24,6200],
+["Microtek","Solar PCU 2.4kVA","Pure sine",2400,24,"Yes",24,21500],
+["Amaron","Pure Sine 1100","Pure sine",1100,12,"No",24,6300],
+["Su-Kam","Falcon Pro 1100","Pure sine",1100,12,"No",24,6500],
+["V-Guard","Prime 1250","Pure sine",1250,12,"No",24,7500],
+["Livguard","LGS 1100","Pure sine",1100,12,"No",24,6500],
+["Okaya","Pure Sine 1100","Pure sine",1100,12,"No",24,6000],
+["Growatt","3kW Hybrid","Hybrid, pure sine",3000,48,"Yes",60,52000],
+["Growatt","3kW On-grid","On-grid string",3000,0,"Grid-tied",60,28000],
+["Solis","5kW On-grid","On-grid string",5000,0,"Grid-tied",60,38000],
+["Sungrow","5kW Hybrid","Hybrid, pure sine",5000,48,"Yes",60,85000]];
+var P=[
+["Waaree","Mono PERC 540W","540W",25,13500],
+["Adani Solar","Mono PERC 545W","545W",25,13800],
+["Vikram Solar","Mono PERC 540W","540W",25,13500],
+["Tata Power Solar","Mono 540W","540W",25,14500],
+["Loom Solar","Mono PERC 540W","540W",25,14000],
+["Luminous","Mono 335W","335W",25,9200]];
+var K={bat:B,inv:I},sel={bat:[],inv:[]},tab="bat",flt="All";
+function inr(n){return "₹"+Math.round(n).toLocaleString("en-IN")}
+function el(id){return document.getElementById(id)}
+function cats(){var s=["All"];B.forEach(function(b){if(s.indexOf(b[2])<0)s.push(b[2])});return s}
+function invcats(){var s=["All"];I.forEach(function(b){if(s.indexOf(b[2])<0)s.push(b[2])});return s}
+function renderFilters(){
+ var h="";if(tab!=="pan"){(tab==="bat"?cats():invcats()).forEach(function(c){h+='<button class="chip" aria-pressed="'+(c===flt)+'" data-f="'+c+'">'+c+'</button>'})}
+ el("filters").innerHTML=h}
+function renderCat(){
+ var h="",n=0;
+ if(tab==="pan"){P.forEach(function(p){h+='<div class="card"><span class="brand">'+p[0]+'</span><h3>'+p[1]+'</h3><span class="spec">'+p[2]+' · '+p[3]+' year performance warranty</span><span class="price">'+inr(p[4])+' per panel</span></div>'});
+  el("catnote").textContent="Panels, inverters and mounting are quoted together in the solar packages below."}
+ else{K[tab].forEach(function(x,i){
+  if(flt!=="All"&&x[2]!==flt)return;n++;
+  var on=sel[tab].indexOf(i)>=0,spec=tab==="bat"?x[2]+" · 12V "+x[3]+"Ah · "+x[4]+" months":x[2]+" · "+x[3]+" VA · "+(x[4]?x[4]+"V battery":"no battery")+" · "+x[6]+" months";
+  h+='<div class="card'+(on?" on":"")+'"><span class="brand">'+x[0]+'</span><h3>'+x[1]+'</h3><span class="spec">'+spec+'</span><div class="row"><span class="price">'+inr(tab==="bat"?x[5]:x[7])+'</span><button class="btn sm '+(on?"":"alt")+'" data-c="'+i+'" aria-pressed="'+on+'">'+(on?"Remove":"Compare")+'</button></div></div>'});
+  el("catnote").textContent=n+" products shown. Warranty is the typical total including pro-rata."}
+ el("cat").innerHTML=h}
+function renderCmp(){
+ var out="";
+ ["bat","inv"].forEach(function(k){
+  var s=sel[k];if(!s.length)return;var d=s.map(function(i){return K[k][i]});
+  var rows=[],best=function(f,low){var v=d.map(f),t=low?Math.min.apply(0,v):Math.max.apply(0,v);return v.map(function(x){return d.length>1&&x===t})};
+  function row(l,f,fmt,low){var fl=best(f,low);rows.push('<tr><th>'+l+'</th>'+d.map(function(x,j){return '<td class="'+(fl[j]?"best":"")+'">'+fmt(f(x))+'</td>'}).join("")+'</tr>')}
+  function plain(l,f){rows.push('<tr><th>'+l+'</th>'+d.map(function(x){return '<td>'+f(x)+'</td>'}).join("")+'</tr>')}
+  plain("Brand",function(x){return x[0]});
+  plain("Type",function(x){return x[2]});
+  if(k==="bat"){row("Capacity",function(x){return x[3]},function(v){return v+" Ah"},false);row("Warranty",function(x){return x[4]},function(v){return v+" months"},false);row("Price",function(x){return x[5]},inr,true);row("Price per Ah",function(x){return x[5]/x[3]},function(v){return inr(v)},true);row("Stored energy",function(x){return x[3]*12},function(v){return (v/1000).toFixed(2)+" kWh"},false)}
+  else{row("Rating",function(x){return x[3]},function(v){return v+" VA"},false);plain("Battery voltage",function(x){return x[4]?x[4]+"V":"None"});plain("Solar ready",function(x){return x[5]});row("Warranty",function(x){return x[6]},function(v){return v+" months"},false);row("Price",function(x){return x[7]},inr,true);row("Price per VA",function(x){return x[7]/x[3]},function(v){return "₹"+v.toFixed(2)},true)}
+  out+='<h3 style="margin:6px 0 10px">'+(k==="bat"?"Batteries":"Inverters")+'</h3><table><thead><tr><th></th>'+d.map(function(x){return '<th>'+x[1]+'</th>'}).join("")+'</tr></thead><tbody>'+rows.join("")+'</tbody></table>'});
+ el("cmp").innerHTML=out||'<p class="note">Nothing selected yet. Choose products from the list above.</p>'}
+el("tabs").addEventListener("click",function(e){var b=e.target.closest("[data-t]");if(!b)return;tab=b.dataset.t;flt="All";
+ [].forEach.call(el("tabs").children,function(c){c.setAttribute("aria-pressed",c===b)});renderFilters();renderCat()});
+el("filters").addEventListener("click",function(e){var b=e.target.closest("[data-f]");if(!b)return;flt=b.dataset.f;renderFilters();renderCat()});
+el("cat").addEventListener("click",function(e){var b=e.target.closest("[data-c]");if(!b)return;var i=+b.dataset.c,s=sel[tab],p=s.indexOf(i);
+ if(p>=0)s.splice(p,1);else{if(s.length>=3)s.shift();s.push(i)}renderCat();renderCmp()});
+
+el("fgo").addEventListener("click",function(){
+ var u=+el("f_u").value,a=+el("f_a").value,sf=+el("f_s").value,ph=+el("f_p").value,res=el("f_t").value==="r",r=el("fres");
+ if(!(u>0)||!(a>=0)){r.innerHTML='<div class="verdict bad">Enter your monthly units and roof area to continue.</div>';return}
+ var perKw=120*sf,need=Math.ceil(u/perKw*2)/2,byRoof=Math.floor(a/100*2)/2,cap=ph===1?5:20,kw=Math.min(need,byRoof,cap);
+ var cls="",msg="";
+ if(byRoof<1){cls="bad";msg="Roof space is too small for a standard 1 kW system. A site visit may find options such as raised structures or a nearby shadow-free area."}
+ else if(sf<0.7){cls="bad";msg="Heavy shade cuts output by about 40%. Solar is possible only if panels can go on a shadow-free part of the roof. We suggest a site visit first."}
+ else if(kw<need){cls="warn";msg="Feasible, but "+(byRoof<need&&byRoof<cap?"roof space":"your connection type")+" limits the system to "+kw+" kW. It will cover part of your usage."}
+ else{msg="Looks feasible. A "+kw+" kW system can cover your usage."}
+ var gen=kw*perKw,off=Math.min(100,gen/u*100),cost=kw*58000,sub=0;
+ if(res){sub=Math.min(kw,2)*30000+(kw>2?18000:0);sub=Math.min(sub,78000)}
+ var save=gen*12*7,net=cost-sub,pay=save>0?net/save:0;
+ r.innerHTML='<div class="verdict '+cls+'"><b>'+msg+'</b></div><div class="stats">'
+ +'<div><b>'+kw+' kW</b><span>Suggested system size</span></div>'
+ +'<div><b>'+Math.round(gen)+' units</b><span>Estimated generation per month</span></div>'
+ +'<div><b>'+Math.round(off)+'%</b><span>Of your usage covered</span></div>'
+ +'<div><b>'+kw*100+' sq ft</b><span>Roof area needed</span></div>'
+ +'<div><b>'+inr(cost)+'</b><span>Approx. system cost</span></div>'
+ +'<div><b>'+(res?inr(sub):"None")+'</b><span>'+(res?"Estimated central subsidy":"Subsidy is for homes only")+'</span></div>'
+ +'<div><b>'+inr(save)+'</b><span>Savings per year at about ₹7 per unit</span></div>'
+ +'<div><b>'+pay.toFixed(1)+' years</b><span>Payback after subsidy</span></div></div>'
+ +'<p class="note" style="margin-top:12px">Next steps: site survey, design, KSEB net-metering application, installation, then a bi-directional meter. '+(ph===1&&need>5?"Systems above 5 kW need a three-phase connection. ":"")+'<a href="#contact">Contact us</a> to book a visit.</p>'});
+
+var pkgs=[[1,"1 kW on-grid","About 3 to 4 units a day. Suits a small home.",100],[2,"2 kW on-grid","Suits homes using about 200 units a month.",200],[3,"3 kW on-grid","Our most chosen size. Full maximum subsidy for homes starts here.",300],[5,"5 kW on-grid","Larger homes, shops and small offices.",500],[3,"3 kW hybrid with battery","Solar plus battery backup for power cuts.",300]];
+el("pk").innerHTML=pkgs.map(function(p,i){var hy=i===4,c=hy?p[0]*95000:p[0]*58000;return '<div class="card"><h3>'+p[1]+'</h3><span class="spec">'+p[2]+'</span><span class="spec">Roof needed: about '+p[3]+' sq ft</span><span class="price">From '+inr(c)+'</span></div>'}).join("");
+renderFilters();renderCat();
+</script>
+</body>
+</html>
